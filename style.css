@@ -1,0 +1,169 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: hsl(200 80% 95%);
+	color: #222;
+	font-family: sans-serif;
+	font-size: 100%;
+}
+
+body {
+	line-height: 1.6;
+}
+
+body:hover{
+    background-color: #3c3434;
+    color: #fff;
+}
+
+article {
+	font-size: 1.25rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+img[width] {
+	width: auto;
+}
+
+img[width][height] {
+	height: auto;
+}
+
+h1{
+	font-size: 4rem;
+}
+
+p{
+	margin: 0 0 1.25rem 0;
+}
+
+/* this code is for zig zag style in the main img */
+article header{
+	height: 300px;
+	position: relative;
+	--mask:
+		radial-gradient(23.32px at 50% calc(100% - 32.00px),#815c5c 99%,#0000 101%) calc(50% - 40px) 0/80px 100%,
+		radial-gradient(23.32px at 50% calc(100% + 12.00px),#0000 99%,#827474 101%) 50% calc(100% - 20px)/80px 100% repeat-x;
+	-webkit-mask: var(--mask);
+	mask: var(--mask);
+}
+
+.article-info{
+	background-image: linear-gradient(
+		to bottom,
+		hsla(0, 0%, 0%, 0) 0%,
+		hsla(0, 0%, 0%, 0.013) 8.1%,
+		hsla(0, 0%, 0%, 0.049) 15.5%,
+		hsla(0, 0%, 0%, 0.104) 22.5%,
+		hsla(0, 0%, 0%, 0.175) 29%,
+		hsla(0, 0%, 0%, 0.259) 35.3%,
+		hsla(0, 0%, 0%, 0.352) 41.2%,
+		hsla(0, 0%, 0%, 0.45) 47.1%,
+		hsla(0, 0%, 0%, 0.55) 52.9%,
+		hsla(0, 0%, 0%, 0.648) 58.8%,
+		hsla(0, 0%, 0%, 0.741) 64.7%,
+		hsla(0, 0%, 0%, 0.825) 71%,
+		hsla(0, 0%, 0%, 0.896) 77.5%,
+		hsla(0, 0%, 0%, 0.951) 84.5%,
+		hsla(0, 0%, 0%, 0.987) 91.9%,
+		hsl(0, 0%, 0%) 100%
+	);
+	position: absolute;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	color: #fff;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	left: 0;
+	z-index: 1883;
+}
+
+article header img{
+	position: absolute;
+	top: 0;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	pointer-events: none;
+}
+
+figure{
+	margin-bottom: 1.5rem;
+}
+
+figure:has(figcaption) {
+	background-color: hsl(200 50% 50%);
+	border: 2px solid #666;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 1rem 0;
+	max-width: 60%;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+	border-radius: .25rem;
+}
+
+figure:has(figcaption)[data-color="red"]{
+	background-color: hsl(6 75% 33%);
+	color: #fff;
+}
+
+figure:has(figcaption)[data-color="orange"]{
+	background-color: hsl(20 75% 33%);
+	color: #fff;
+}
+
+figure figcaption{
+	text-align: center;
+	padding: 1rem;
+}
+
+figure img{
+	object-fit: cover;
+	height: 100%;
+	max-height: 400px;
+	width: 100%;
+}
+
+.article-body{
+	max-width: 66%;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.image-row{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 1.5rem;
+}
+
+.image-row figure{
+	width: 40%;
+}
+
+.article-img-left{
+	margin-right: 1rem;
+	float: left;
+	max-width: 40%;
+}
+
+.article-img-right{
+	margin-left: 1rem;
+	float: right;
+	max-width: 40%;
+}
+
+.article-img-feature{
+	margin: 0 auto;
+}
